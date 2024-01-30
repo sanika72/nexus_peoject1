@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant login and signup page</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Header -->
+   <header class="header">
+    <nav class="nav">
+        <a href="#" class="nav-logo">Swaad</a>
+        <ul class="nav-items">
+         <li class="nav-items">
+             <a href="#" class="nav-links">About</a>
+             <a href="#" class="nav-links">Services
+             <a href="#" class="nav-links">Reviews</a>
+         </li>
+        </ul>
+        <button class="button" id="loginbtn">Login</button>
+     </nav>
+   </header>
+   <!-- Home -->
+   <section class="home">
+      
+       
+          <div class="form-box">
+              <h1 id="title">Signup</h1>
+              <form action="">
+                  <div class="input-group">
+                    <div class="input-field" id="Namefield">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="Name" >
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bx-envelope'></i>
+                        <input type="mail" placeholder="Email" required>
+                    </div>
+                    <div class="input-field">
+                        <i class='bx bxs-lock'></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <p>Forgot password  <a href="#">Click here</a></p>
+                    <div class="btn-field">
+                        <button type="submit" id="Signupbtn">Sing Up</button>
+                        <button type="submit" class="disable" id="Signinbtn">Sing In</button>
+                    </div>
+                  </div>
+              </form>
+          </div>
+       
+   </section>
+   <script>
+      let Signupbtn=document.getElementById("Signupbtn");
+      let Signinbtn=document.getElementById("Signinbtn");
+      let Namefield=document.getElementById("Namefield");
+      let title=document.getElementById("title");
+      let loginbtn=document.getElementById("loginbtn");
+      Signinbtn.onclick=function(){
+        Namefield.style.maxHeight="0";
+        title.innerHTML="Sign In";
+        Signupbtn.classList.add("disable");
+        Signinbtn.classList.remove("disable");
+      } 
+      Signupbtn.onclick=function(){
+        Namefield.style.maxHeight="60px";
+        title.innerHTML="Sign Up";
+        Signupbtn.classList.remove("disable");
+        Signinbtn.classList.add("disable");
+      } 
+      loginbtn.onclick=function(){
+        
+        Namefield.style.maxHeight="0";
+        title.innerHTML="Sign In";
+        Signupbtn.classList.add("disable");
+        Signinbtn.classList.remove("disable");
+      } 
+      
+   </script>
+</body>
+</html>
